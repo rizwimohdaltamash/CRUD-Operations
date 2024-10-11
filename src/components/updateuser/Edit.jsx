@@ -23,7 +23,7 @@ const Edit = () => {
   }
 
   useEffect(()=>{
-    axios.get(`https://crud-backend-nu.vercel.app/api/getone/${id}`)
+    axios.get(`https://crud-backend-rbje.onrender.com/api/getone/${id}`)
     .then((response)=>{
      setUser(response.data);
     })

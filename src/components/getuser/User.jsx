@@ -10,14 +10,14 @@ const User = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await axios.get("https://crud-backend-nu.vercel.app/api/getall");
+      const response = await axios.get("https://crud-backend-rbje.onrender.com/api/getall");
       setUsers(response.data);
     };
     fetchData();
   }, []);
 
   const deleteUser =async(userId)=>{
-        await axios.delete(`https://crud-backend-nu.vercel.app/api/delete/${userId}`)
+        await axios.delete(`https://crud-backend-rbje.onrender.com/api/delete/${userId}`)
         .then((response)=>{
         setUsers((prevUser)=>prevUser.filter((user)=>user._id !==userId));
         toast.success(response.data.msg,{position:"top-right"});

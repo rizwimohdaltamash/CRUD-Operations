@@ -24,7 +24,7 @@ const Add = () => {
 
   const submitForm = async(e) =>{
     e.preventDefault();
-    await axios.post("https://crud-backend-nu.vercel.app/api/create",user)
+    await axios.post("https://crud-backend-rbje.onrender.com/api/create",user)
     .then((response)=>{
     toast.success(response.data.msg,{position:"top-right"});
     navigate("/");
